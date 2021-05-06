@@ -2,6 +2,11 @@
   background-color: black;
 }
 
+body {
+  display: none;
+}
+
 p {
   color: red;
 }
+
