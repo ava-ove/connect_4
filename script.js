@@ -8,44 +8,58 @@ let grid = document.querySelector(".grid");
 let turn = 0;
 let gameOver = false;
 
-
-function winCheck(){
-
-  for(let i = 0; i < HEIGHT - 3; i++){
-    for(let j = 0; j < WIDTH; j++){
+function winCheck() {
+  for (let i = 0; i < HEIGHT - 3; i++) {
+    for (let j = 0; j < WIDTH; j++) {
       let cell = infoArray[i][j];
-      if(cell === -1) continue;
-      if(infoArray[i + 1][j] === cell && infoArray[i + 2][j] === cell && infoArray[i + 3][j] === cell){
+      if (cell === -1) continue;
+      if (
+        infoArray[i + 1][j] === cell &&
+        infoArray[i + 2][j] === cell &&
+        infoArray[i + 3][j] === cell
+      ) {
         return true;
       }
     }
   }
 
-  for(let i = 0; i < HEIGHT; i++){
-    for(let j = 0; j < WIDTH - 3; j++){
+  for (let i = 0; i < HEIGHT; i++) {
+    for (let j = 0; j < WIDTH - 3; j++) {
       let cell = infoArray[i][j];
-      if(cell === -1) continue;
-      if(infoArray[i][j + 1] === cell && infoArray[i][j + 2] === cell && infoArray[i][j + 3] === cell){
+      if (cell === -1) continue;
+      if (
+        infoArray[i][j + 1] === cell &&
+        infoArray[i][j + 2] === cell &&
+        infoArray[i][j + 3] === cell
+      ) {
         return true;
       }
     }
   }
 
-  for(let i = 0; i < HEIGHT - 3; i++){
-    for(let j = 0; j < WIDTH - 3; j++){
+  for (let i = 0; i < HEIGHT - 3; i++) {
+    for (let j = 0; j < WIDTH - 3; j++) {
       let cell = infoArray[i][j];
-      if(cell === -1) continue;
-      if(infoArray[i + 1][j + 1] === cell && infoArray[i + 2][j + 2] === cell && infoArray[i + 3][j + 3] === cell){
+      if (cell === -1) continue;
+      if (
+        infoArray[i + 1][j + 1] === cell &&
+        infoArray[i + 2][j + 2] === cell &&
+        infoArray[i + 3][j + 3] === cell
+      ) {
         return true;
       }
     }
   }
 
-  for(let i = 3; i < HEIGHT; i++){
-    for(let j = 0; j < WIDTH - 3; j++){
+  for (let i = 3; i < HEIGHT; i++) {
+    for (let j = 0; j < WIDTH - 3; j++) {
       let cell = infoArray[i][j];
-      if(cell === -1) continue;
-      if(infoArray[i - 1][j + 1] === cell && infoArray[i - 2][j + 2] === cell && infoArray[i - 3][j + 3] === cell){
+      if (cell === -1) continue;
+      if (
+        infoArray[i - 1][j + 1] === cell &&
+        infoArray[i - 2][j + 2] === cell &&
+        infoArray[i - 3][j + 3] === cell
+      ) {
         return true;
       }
     }
@@ -53,11 +67,10 @@ function winCheck(){
   return false;
 }
 
-
-function drawCheck(){
-  for(let i = 0; i < HEIGHT; i++){
-    for(let j = 0; j < WIDTH; j++){
-      if(infoArray[i][j] === -1){
+function drawCheck() {
+  for (let i = 0; i < HEIGHT; i++) {
+    for (let j = 0; j < WIDTH; j++) {
+      if (infoArray[i][j] === -1) {
         return false;
       }
     }
@@ -65,28 +78,28 @@ function drawCheck(){
   return true;
 }
 
-for(let j = 0; j < WIDTH; j++){
+for (let j = 0; j < WIDTH; j++) {
   let button = document.createElement("div");
   button.classList.add("cell");
   button.classList.add("button");
-  button.addEventListener("click", function(){
-    if(gameOver){
+  button.addEventListener("click", function () {
+    if (gameOver) {
       return;
     }
     let num;
-    turn % 2 === 0 ? num = 0: num = 1;
-    if(infoArray[0][j] !== -1){
+    turn % 2 === 0 ? (num = 0) : (num = 1);
+    if (infoArray[0][j] !== -1) {
       return;
     }
-    for(let i = 0; i < HEIGHT + 1; i++){
-      if(i == HEIGHT || infoArray[i][j] !== -1){
+    for (let i = 0; i < HEIGHT + 1; i++) {
+      if (i == HEIGHT || infoArray[i][j] !== -1) {
         infoArray[i - 1][j] = num;
         elementArray[i - 1][j].innerHTML = `${num}`;
-        if(winCheck()){
+        if (winCheck()) {
           gameOver = true;
           console.log("HELLO");
         }
-        if(drawCheck()){
+        if (drawCheck()) {
           gameOver = true;
         }
         turn++;
@@ -98,13 +111,8 @@ for(let j = 0; j < WIDTH; j++){
   grid.appendChild(button);
 }
 
-
-<<<<<<< HEAD
-for(let i = 0; i < HEIGHT; i++){
-  let arr = [];
-=======
 for (let i = 0; i < HEIGHT; i++) {
->>>>>>> f7fb32b0597da4c70c0e2fce44904c56697cbba9
+  let arr = [];
   let row = [];
   for (let j = 0; j < WIDTH; j++) {
     let cell = document.createElement("div");
