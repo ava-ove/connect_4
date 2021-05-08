@@ -112,8 +112,8 @@ for (let j = 0; j < WIDTH; j++) {
 }
 
 for (let i = 0; i < HEIGHT; i++) {
-  let arr = [];
   let row = [];
+  let arr = [];
   for (let j = 0; j < WIDTH; j++) {
     let cell = document.createElement("div");
     let textNode = document.createTextNode("-1");
