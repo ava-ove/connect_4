@@ -14,11 +14,6 @@ body {
   vertical-align: middle;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
-<<<<<<< HEAD
-  grid-template-rows: auto auto auto auto auto auto auto;
-  width: 350px;
-  height: 300px;
-=======
   grid-template-rows: auto auto auto auto auto auto;
   width: 560px;
   height: 560px;
@@ -31,7 +26,6 @@ body {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
->>>>>>> f7fb32b0597da4c70c0e2fce44904c56697cbba9
 }
 
 .cell {
