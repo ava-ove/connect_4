@@ -1,13 +1,88 @@
-.grid{
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  height: 100vh; /*  100% of the viewports height */
+  background-image: linear-gradient(to top left, #161609 0%, #800f1e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  vertical-align: middle;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
+<<<<<<< HEAD
   grid-template-rows: auto auto auto auto auto auto auto;
   width: 350px;
   height: 300px;
+=======
+  grid-template-rows: auto auto auto auto auto auto;
+  width: 560px;
+  height: 560px;
 }
 
-.cell{
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+>>>>>>> f7fb32b0597da4c70c0e2fce44904c56697cbba9
+}
+
+.cell {
   border: 1px solid black;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
+}
+
+.restart {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -880%);
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  /* border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1); */
+}
+
+.current {
+  position: absolute;
+  background-color: #343c44;
+  opacity: 0.8;
+  border-radius: 9px; /* changes border to be rounder  */
+  color: white;
+  width: 200px;
+  height: 100px;
+  margin: 0 2rem;
+  padding: 1rem 1rem;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.label {
+  font-size: 1.2rem;
+  color: rgb(228, 217, 217);
+}
+
+.left {
+  left: 50%;
+  margin-left: -250px;
+  margin-top: 340px;
+}
+
+.right {
+  right: 50%;
+  margin-right: -250px;
+  margin-top: 340px;
+}
+
+.score {
+  font-size: 1.2rem;
 }

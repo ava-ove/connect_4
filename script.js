@@ -1,4 +1,3 @@
-
 const HEIGHT = 6;
 const WIDTH = 7;
 
@@ -100,10 +99,14 @@ for(let j = 0; j < WIDTH; j++){
 }
 
 
+<<<<<<< HEAD
 for(let i = 0; i < HEIGHT; i++){
   let arr = [];
+=======
+for (let i = 0; i < HEIGHT; i++) {
+>>>>>>> f7fb32b0597da4c70c0e2fce44904c56697cbba9
   let row = [];
-  for(let j = 0; j < WIDTH; j++){
+  for (let j = 0; j < WIDTH; j++) {
     let cell = document.createElement("div");
     let textNode = document.createTextNode("-1");
     cell.appendChild(textNode);
