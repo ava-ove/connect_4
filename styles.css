@@ -1,7 +1,7 @@
 .grid{
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
-  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto;
   width: 350px;
   height: 300px;
 }
