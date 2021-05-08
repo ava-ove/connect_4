@@ -4,11 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <title>Connect4</title>
   </head>
   <body>
-    <div class="grid">
+    <div class="grid center"></div>
+    <button type="button" class="btn btn-dark center restart">RESTART</button>
+    <div class="current left">
+      <p class="label">PLAYER 1</p>
+      <p class="score" id="score1">0</p>
+    </div>
+    <div class="current right">
+      <p class="label">PLAYER 2</p>
+      <p class="score" id="score2">0</p>
     </div>
   </body>
   <script src="./script.js"></script>
